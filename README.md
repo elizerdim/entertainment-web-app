@@ -89,6 +89,8 @@ I used the CSS reset and utility classes from scrimba's [Build a Space Travel We
 </NavLink>
 ```
 
+- ```scrollbar-width: none;``` for hiding scrollbar without affecting the scrolling behavior.
+
 ### Continued development
 
 

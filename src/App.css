@@ -1,17 +1,17 @@
 /* FONTS */
 @font-face {
-  font-family: 'Outfit';
-  src: url('Outfit-Light.woff2') format('woff2'),
-       url('Outfit-Light.woff') format('woff');
+  font-family: "Outfit";
+  src: url("/src/assets/fonts/Outfit-Light.woff2") format("woff2"),
+       url("/src/assets/fonts/Outfit-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Outfit';
-  src: url('Outfit-Medium.woff2') format('woff2'),
-       url('Outfit-Medium.woff') format('woff');
+  font-family: "Outfit";
+  src: url("/src/assets/fonts/Outfit-Medium.woff2") format("woff2"),
+       url("/src/assets/fonts/Outfit-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -60,8 +60,8 @@ picture {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -141,9 +141,91 @@ button {
   border: 0;
 }
 
-.bg-dark { background-color: var(--clr-primary-600);}
-.bg-accent { background-color: var(--clr-primary-500);}
+.bg-dark {
+  background-color: var(--clr-primary-600);
+}
+.bg-accent {
+  background-color: var(--clr-primary-500);
+}
 
+.heading-l {
+  font-weight: 300;
+  font-size: 2rem;
+}
+.heading-m {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+.heading-s {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.heading-xs {
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+.body-m {
+  font-weight: 300;
+  font-size: 1rem;
+}
+.body-s {
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 48em) {
+  .heading-l {
+    font-size: 1.25rem;
+  }
+  .heading-m {
+    font-size: 1rem;
+  }
+  .heading-s {
+    font-size: 1rem;
+  }
+  .heading-xs {
+    font-size: 0.9rem;
+  }
+  .body-m {
+    font-size: 0.8rem;
+  }
+  .body-s {
+    font-size: 0.7rem;
+  }
+}
+
+/* GENERAL STYLES */
 body {
   background-color: var(--clr-primary-600);
+  color: var(--clr-neutral);
+  font-family: "Outfit", sans-serif;
+}
+
+main {
+  padding: 1rem;
+}
+
+input {
+  background-color: var(--clr-primary-600);
+  border: none;
+  width: 100%;
+}
+
+.seach-bar {
+  align-items: center;
+  margin-top: .5rem;
+}
+
+.search-icon {
+  width: 1.5em;
+}
+
+.heading {
+  margin: 1.25rem 0;
+}
+
+@media only screen and (max-width: 48em) {
+  .search-icon {
+    width: unset;
+  }
 }
