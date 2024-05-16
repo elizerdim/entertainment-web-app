@@ -1,21 +1,25 @@
-import styles from "./scroll-display.module.css";
+import styles from "./display.module.css"
 import data from "../../data.json";
 
-export default function ScrollDisplay() {
-  const trending = data.filter((item) => item.isTrending);
+export default function Display() {
+  const recommended = data.slice(5);
 
   return (
-    <div className={`${styles.container} flex`}>
-      {trending.map((item) => (
+    <div className={`${styles.container} grid`}>
+      {recommended.map(item => (
         <article className={styles.item} key={item.title.split(" ").join("-")}>
           <picture className={styles.image}>
             <source
               media="(max-width: 48em)"
-              srcSet={`${item.thumbnail.trending?.small.slice(8)}`}
+              srcSet={`${item.thumbnail.regular.small.slice(8)}`}
             />
             <source
-              media="(min-width: 48em)"
-              srcSet={`${item.thumbnail.trending?.large.slice(8)}`}
+              media="(max-width: 90em)"
+              srcSet={`${item.thumbnail.regular.medium.slice(8)}`}
+            />
+            <source
+              media="(min-width: 90em)"
+              srcSet={`${item.thumbnail.regular.large.slice(8)}`}
             />
             <img src={`${item.thumbnail.trending?.large.slice(8)}`} alt="Movie Poster" />
           </picture>
@@ -53,5 +57,5 @@ export default function ScrollDisplay() {
         </article>
       ))}
     </div>
-  );
+  )
 }

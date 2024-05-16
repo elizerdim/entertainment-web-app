@@ -224,6 +224,15 @@ input {
   margin: 1.25rem 0;
 }
 
+.bookmark-button {
+  position: absolute;
+  top: .75em;
+  right: 1em;
+  padding: .65em;
+  border-radius: 100px;
+  opacity: 50%;
+}
+
 @media only screen and (min-width: 48em) {
   main {
     padding: .75rem 1.75rem;
