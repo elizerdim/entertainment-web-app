@@ -79,6 +79,16 @@ I used the CSS reset and utility classes from scrimba's [Build a Space Travel We
 
 - CSS ```font``` property is a shorthand property for font-style, font-variant, font-weight, font-size/line-height, and font-family.
 
+- Accessible SVG as a navigation link (there are other alternatives, see Useful resources below): 
+```jsx
+<NavLink to="/">
+  <svg aria-hidden="true">
+    <path />
+  </svg>
+  <span className="sr-only">Home Page</span>
+</NavLink>
+```
+
 ### Continued development
 
 
@@ -96,3 +106,4 @@ I used the CSS reset and utility classes from scrimba's [Build a Space Travel We
     <img src="img_girl.jpg">
   </picture>
   ```
+- [Accessible SVGs](https://www.smashingmagazine.com/2021/05/accessible-svg-patterns-comparison/) - This article offers many options for making svgs accessible. 

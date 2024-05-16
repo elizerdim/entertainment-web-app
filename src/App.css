@@ -92,6 +92,7 @@ a,
 button {
   all: unset;
   outline: revert;
+  cursor: pointer;
 }
 
 /* Remove animations for those who have reduced motion settings on */
@@ -142,3 +143,7 @@ button {
 
 .bg-dark { background-color: var(--clr-primary-600);}
 .bg-accent { background-color: var(--clr-primary-500);}
+
+body {
+  background-color: var(--clr-primary-600);
+}
