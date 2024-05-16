@@ -9,6 +9,7 @@ import HomePage from "./pages/HomePage";
 import MoviesPage from "./pages/MoviesPage";
 import TVSeriesPage from "./pages/TVSeriesPage";
 import BookmarkedPage from "./pages/BookmarkedPage";
+import "./App.css"
 
 export default function App() {
   const router = createBrowserRouter(

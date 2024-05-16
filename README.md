@@ -1,6 +1,6 @@
-# Challenge/Project Name (e.g. Frontend Mentor - Results summary component solution)
+# Entertainment Web App
 
-This is a solution to the [e.g. Results summary component challenge on Frontend Mentor](https://www.example.com). 
+This is a solution to the [Entertainment web app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/entertainment-web-app-J-UhgAW1X).
 
 ## Table of contents
 
@@ -20,12 +20,17 @@ This is a solution to the [e.g. Results summary component challenge on Frontend 
 
 Users should be able to:
 
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Navigate between Home, Movies, TV Series, and Bookmarked Shows pages
+- Add/Remove bookmarks from all movies and TV series
+- Search for relevant shows on all pages
+- **Bonus**: Build this project as a full-stack application
+- **Bonus**: If you're building a full-stack app, we provide authentication screen (sign-up/login) designs if you'd like to create an auth flow
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![]()
 
 ### Links
 
@@ -35,43 +40,59 @@ Users should be able to:
 ## My process
 
 ### Built with
-
+- React
+- React Router
+- TypeScript  
+  &nbsp;
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- Grid
+- CSS Modules
+- Mobile-first workflow  
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I used the CSS reset and utility classes from scrimba's [Build a Space Travel Website](https://scrimba.com/learn/spacetravel) course by Kevin Powell.
 
-To see how you can add code snippets, see below:
+- In CSS ```var()``` function, a second argument can be provided as a fallback value.
 
+```css
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+```
+
+- To add an empty line in Markdown, add two spaces to the end of the previous line and ```\&nbsp;``` on the next line.
+
+- A custom CSS property can be overwritten with inline CSS or with a new declaration:
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div class="call-to-action" style="--gap: 2rem;"></div>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.call-to-action {
+  --gap: 2rem;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+- I was wondering why Andy Bell's CSS reset included ```ul[role='list']``` instead of just ```ul``` and found this: "Safari does not recognize ordered or unordered lists as lists in the accessibility tree if they have a ```list-style``` value of ```none```, unless the list is nested within the <nav> navigation element. This behavior is intentional and is not considered a bug." [source (MDN)](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style#accessibility_concerns)
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+- CSS ```font``` property is a shorthand property for font-style, font-variant, font-weight, font-size/line-height, and font-family.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [dvh, svh, lvh](https://www.youtube.com/watch?v=ru3U8MHbFFI) - In this video, [Kevin Powell](https://www.youtube.com/@KevinPowell) explains the differences between the three units. (spoiler alert: you want to use svh)
+- [```padding-inline``` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/padding-inline) - This is a modern CSS property that defines the logical inline start and end padding depending on the writing mode, directionality, and text orientation. There is also ```margin-inline```.
+- [HTML ```<picture>``` element](https://www.w3schools.com/html/html_images_picture.asp) - This element allows display of different pictures for different devices or screen sizes.
+
+  ```css
+  <picture>
+    <source media="(min-width: 650px)" srcset="img_food.jpg">
+    <source media="(min-width: 465px)" srcset="img_car.jpg">
+    <img src="img_girl.jpg">
+  </picture>
+  ```
