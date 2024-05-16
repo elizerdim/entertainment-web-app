@@ -224,8 +224,18 @@ input {
   margin: 1.25rem 0;
 }
 
-@media only screen and (max-width: 48em) {
+@media only screen and (min-width: 48em) {
+  main {
+    padding: .75rem 1.75rem;
+  }
+
   .search-icon {
     width: unset;
+  }
+}
+
+@media only screen and (min-width: 90em) {
+  main {
+    padding-top: 3.5rem;
   }
 }

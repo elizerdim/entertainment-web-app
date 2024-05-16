@@ -1,0 +1,47 @@
+.container {
+  overflow: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.item {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.image {
+  width: 15em;
+  border-radius: .5em;
+  overflow: hidden;
+}
+
+.button {
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  padding: .65em;
+  border-radius: 100px;
+  opacity: 50%;
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1em;
+  background: linear-gradient(to top, black, transparent);
+  width: 100%;
+  border-radius: 0 0 .5em .5em;
+}
+
+.info {
+  --gap: .5em;
+  align-items: center;
+  color: #FFFFFF90;
+}
+
+@media only screen and (min-width: 48em) {
+  .image {
+    width: 30em;
+  }
+}
