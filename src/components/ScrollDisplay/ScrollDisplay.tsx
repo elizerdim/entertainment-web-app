@@ -1,8 +1,8 @@
 import styles from "./scroll-display.module.css";
-import data from "../../data.json";
+import ComponentProps from "../../types/ComponentProps";
 
-export default function ScrollDisplay() {
-  const trending = data.filter((item) => item.isTrending);
+export default function ScrollDisplay(props: ComponentProps) {
+  const trending = props.data.filter((item) => item.isTrending);
 
   return (
     <div className={`${styles.container} flex`}>
@@ -19,7 +19,7 @@ export default function ScrollDisplay() {
             />
             <img src={`${item.thumbnail.trending?.large.slice(8)}`} alt="Movie Poster" />
           </picture>
-          <button className="bookmark-button bg-dark">
+          <button className="bookmark-button bg-dark" onClick={() => props.toggleBookmarked(item)}>
             <svg
               width="12"
               height="14"

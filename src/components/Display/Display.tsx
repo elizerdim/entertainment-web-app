@@ -1,12 +1,12 @@
-import styles from "./display.module.css"
-import data from "../../data.json";
+import styles from "./display.module.css";
+import ComponentProps from "../../types/ComponentProps";
 
-export default function Display() {
-  const recommended = data.slice(5);
+export default function Display(props: ComponentProps) {
+  const recommended = props.data.slice(5);
 
   return (
     <div className={`${styles.container} grid`}>
-      {recommended.map(item => (
+      {recommended.map((item) => (
         <article className={styles.item} key={item.title.split(" ").join("-")}>
           <picture className={styles.image}>
             <source
@@ -21,9 +21,15 @@ export default function Display() {
               media="(min-width: 90em)"
               srcSet={`${item.thumbnail.regular.large.slice(8)}`}
             />
-            <img src={`${item.thumbnail.trending?.large.slice(8)}`} alt="Movie Poster" />
+            <img
+              src={`${item.thumbnail.trending?.large.slice(8)}`}
+              alt="Movie Poster"
+            />
           </picture>
-          <button className="bookmark-button bg-dark">
+          <button
+            className="bookmark-button bg-dark"
+            onClick={() => props.toggleBookmarked(item)}
+          >
             <svg
               width="12"
               height="14"
@@ -57,5 +63,5 @@ export default function Display() {
         </article>
       ))}
     </div>
-  )
+  );
 }
