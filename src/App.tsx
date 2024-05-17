@@ -38,7 +38,12 @@ export default function App() {
             <HomePage data={dataArr} toggleBookmarked={toggleBookmarked} />
           }
         />
-        <Route path="/movies" element={<MoviesPage />} />
+        <Route
+          path="/movies"
+          element={
+            <MoviesPage data={dataArr} toggleBookmarked={toggleBookmarked} />
+          }
+        />
         <Route path="/tvseries" element={<TVSeriesPage />} />
         <Route path="/bookmarked" element={<BookmarkedPage />} />
       </Route>

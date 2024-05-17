@@ -1,12 +1,15 @@
 import styles from "./scroll-display.module.css";
-import ComponentProps from "../../types/ComponentProps";
+import DataItem from "../../types/DataItem";
 
-export default function ScrollDisplay(props: ComponentProps) {
-  const trending = props.data.filter((item) => item.isTrending);
+type Props = {
+  trending: DataItem[];
+  toggleBookmarked: (arg: DataItem) => void;
+}
 
+export default function ScrollDisplay(props: Props) {
   return (
     <div className={`${styles.container} flex`}>
-      {trending.map((item) => (
+      {props.trending.map((item) => (
         <article className={styles.item} key={item.title.split(" ").join("-")}>
           <picture className={styles.image}>
             <source

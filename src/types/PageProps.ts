@@ -1,8 +1,8 @@
 import DataItem from "./DataItem";
 
-type ComponentProps = {
+type PageProps = {
   data: DataItem[];
   toggleBookmarked: (arg: DataItem) => void;
 }
 
-export default ComponentProps;
+export default PageProps;

@@ -1,0 +1,14 @@
+.seach-bar {
+  align-items: center;
+  margin-top: .5rem;
+}
+
+.search-icon {
+  width: 1.5em;
+}
+
+@media only screen and (min-width: 48em) {
+  .search-icon {
+    width: unset;
+  }
+}

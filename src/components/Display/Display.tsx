@@ -1,12 +1,15 @@
 import styles from "./display.module.css";
-import ComponentProps from "../../types/ComponentProps";
+import DataItem from "../../types/DataItem";
 
-export default function Display(props: ComponentProps) {
-  const recommended = props.data.slice(5);
+type Props = {
+  recommended: DataItem[];
+  toggleBookmarked: (arg: DataItem) => void;
+}
 
+export default function Display(props: Props) {
   return (
     <div className={`${styles.container} grid`}>
-      {recommended.map((item) => (
+      {props.recommended.map((item) => (
         <article className={styles.item} key={item.title.split(" ").join("-")}>
           <picture className={styles.image}>
             <source

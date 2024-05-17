@@ -211,15 +211,6 @@ input {
   width: 100%;
 }
 
-.seach-bar {
-  align-items: center;
-  margin-top: .5rem;
-}
-
-.search-icon {
-  width: 1.5em;
-}
-
 .heading {
   margin: 1.25rem 0;
 }
@@ -240,10 +231,6 @@ input {
 @media only screen and (min-width: 48em) {
   main {
     padding: .75rem 1.75rem;
-  }
-
-  .search-icon {
-    width: unset;
   }
 }
 
