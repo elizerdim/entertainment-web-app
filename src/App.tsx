@@ -20,7 +20,13 @@ export default function App() {
   const [dataArr, setDataArr] = useState(list);
 
   function toggleBookmarked(item: DataItem) {
-    console.log(item);
+    const newItem = { ...item, isBookmarked: !item.isBookmarked };
+    const itemIndex = dataArr.findIndex((el) => el.title === item.title);
+    setDataArr([
+      ...dataArr.slice(0, itemIndex),
+      newItem,
+      ...dataArr.slice(itemIndex + 1),
+    ]);
   }
 
   const router = createBrowserRouter(

@@ -233,6 +233,10 @@ input {
   opacity: 50%;
 }
 
+.bookmarked {
+  fill: var(--clr-neutral);
+}
+
 @media only screen and (min-width: 48em) {
   main {
     padding: .75rem 1.75rem;
