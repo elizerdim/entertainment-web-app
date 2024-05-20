@@ -10,45 +10,23 @@ import MoviesPage from "./pages/MoviesPage";
 import TVSeriesPage from "./pages/TVSeriesPage";
 import BookmarkedPage from "./pages/BookmarkedPage";
 import "./App.css";
-import data from "./data.json";
-import { useState } from "react";
-import DataItem from "./types/DataItem";
-
-const list: DataItem[] = data;
+import ShowsProvider from "./context/ShowsContext";
 
 export default function App() {
-  const [dataArr, setDataArr] = useState(list);
-
-  function toggleBookmarked(item: DataItem) {
-    const newItem = { ...item, isBookmarked: !item.isBookmarked };
-    const itemIndex = dataArr.findIndex((el) => el.title === item.title);
-    setDataArr([
-      ...dataArr.slice(0, itemIndex),
-      newItem,
-      ...dataArr.slice(itemIndex + 1),
-    ]);
-  }
-
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
-        <Route
-          index
-          element={
-            <HomePage data={dataArr} toggleBookmarked={toggleBookmarked} />
-          }
-        />
-        <Route
-          path="/movies"
-          element={
-            <MoviesPage data={dataArr} toggleBookmarked={toggleBookmarked} />
-          }
-        />
+        <Route index element={<HomePage />} />
+        <Route path="/movies" element={<MoviesPage />} />
         <Route path="/tvseries" element={<TVSeriesPage />} />
         <Route path="/bookmarked" element={<BookmarkedPage />} />
       </Route>
     )
   );
 
-  return <RouterProvider router={router} />;
+  return (
+    <ShowsProvider>
+      <RouterProvider router={router} />
+    </ShowsProvider>
+  );
 }
