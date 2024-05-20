@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./search-input.module.css"
 
 type Props = {
@@ -5,6 +6,8 @@ type Props = {
 }
 
 export default function SearchInput(props: Props) {
+  const [searchInput, setSearchInput] = useState('');
+
   return (
     <div className={`${styles["seach-bar"]} flex`}>
       <button>
@@ -17,7 +20,9 @@ export default function SearchInput(props: Props) {
         id="search"
         type="text"
         placeholder={props.placeholder}
-        className="heading-m"
+        className={`${styles["search-input"]} heading-m`}
+        value={searchInput}
+        onChange={e => setSearchInput(e.target.value)}
       />
     </div>
   );

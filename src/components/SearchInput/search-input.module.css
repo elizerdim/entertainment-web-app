@@ -7,6 +7,10 @@
   width: 1.5em;
 }
 
+.search-input {
+  color: var(--clr-neutral);
+}
+
 @media only screen and (min-width: 48em) {
   .search-icon {
     width: unset;
