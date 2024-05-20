@@ -9,7 +9,6 @@ type ShowsProviderProps = {
 
 type ShowsContext = {
   allShows: DataItem[];
-  bookmarked: DataItem[];
   toggleBookmarked: (item: DataItem) => void;
 };
 
@@ -17,8 +16,6 @@ export const ShowsContext = createContext({} as ShowsContext);
 
 export default function ShowsProvider({ children }: ShowsProviderProps) {
   const [allShows, updateAllShows] = useImmer(data);
-
-  const bookmarked = allShows.filter((show) => show.isBookmarked);
 
   function toggleBookmarked(show: DataItem) {
     updateAllShows((draft) => {
@@ -31,7 +28,6 @@ export default function ShowsProvider({ children }: ShowsProviderProps) {
     <ShowsContext.Provider
       value={{
         allShows,
-        bookmarked,
         toggleBookmarked,
       }}
     >
