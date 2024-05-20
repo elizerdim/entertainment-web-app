@@ -9,7 +9,7 @@ export default function MoviesPage() {
 
   return (
     <main>
-      <SearchInput placeholder="Search for movies" />
+      <SearchInput placeholder="Search for movies" searchData={movies} />
       <h1>Movies</h1>
       <Display displayedShows={movies} />
     </main>

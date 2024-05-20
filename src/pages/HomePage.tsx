@@ -11,7 +11,10 @@ export default function HomePage() {
 
   return (
     <main>
-      <SearchInput placeholder="Search for movies or TV series" />
+      <SearchInput
+        placeholder="Search for movies or TV series"
+        searchData={allShows}
+      />
       <section>
         <h1 className="heading-l heading">Trending</h1>
         <ScrollDisplay trending={trending} />
