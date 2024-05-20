@@ -42,6 +42,7 @@ Users should be able to:
 ### Built with
 - React
 - React Router
+- Immer npm package
 - TypeScript  
   &nbsp;
 - Semantic HTML5 markup
@@ -88,8 +89,8 @@ I used the CSS reset and utility classes from scrimba's [Build a Space Travel We
   <span className="sr-only">Home Page</span>
 </NavLink>
 ```
-
 - ```scrollbar-width: none;``` for hiding scrollbar without affecting the scrolling behavior.
+- ```Immer``` npm package makes it easier to deal with nested data structures, I discovered it while going through React documentation in this [page](https://react.dev/learn/updating-arrays-in-state).
 
 ### Continued development
 
@@ -109,3 +110,5 @@ I used the CSS reset and utility classes from scrimba's [Build a Space Travel We
   </picture>
   ```
 - [Accessible SVGs](https://www.smashingmagazine.com/2021/05/accessible-svg-patterns-comparison/) - This article offers many options for making svgs accessible. 
+- [immer](https://www.npmjs.com/package/immer) - "Create the next immutable state tree by simply modifying the current tree."
+- [use-immer](https://www.npmjs.com/package/use-immer) - "A hook to use immer as a React hook to manipulate state."
