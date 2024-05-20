@@ -1,15 +1,18 @@
 import styles from "./display.module.css";
 import DataItem from "../../types/DataItem";
+import { useContext } from "react";
+import { ShowsContext } from "../../context/ShowsContext";
 
-type Props = {
-  recommended: DataItem[];
-  toggleBookmarked: (arg: DataItem) => void;
-}
+type DisplayProps = {
+  displayedShows: DataItem[];
+};
 
-export default function Display(props: Props) {
+export default function Display({displayedShows}: DisplayProps) {
+  const { toggleBookmarked } = useContext(ShowsContext);
+
   return (
     <div className={`${styles.container} grid`}>
-      {props.recommended.map((item) => (
+      {displayedShows.map((item) => (
         <article className={styles.item} key={item.title.split(" ").join("-")}>
           <picture className={styles.image}>
             <source
@@ -31,7 +34,7 @@ export default function Display(props: Props) {
           </picture>
           <button
             className="bookmark-button bg-dark"
-            onClick={() => props.toggleBookmarked(item)}
+            onClick={() => toggleBookmarked(item)}
           >
             <svg
               width="12"
