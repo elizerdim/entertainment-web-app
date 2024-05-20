@@ -1,23 +1,24 @@
-// import data from "../data.json";
+import { useContext } from "react";
 import Display from "../components/Display/Display";
 import ScrollDisplay from "../components/ScrollDisplay/ScrollDisplay";
 import SearchInput from "../components/SearchInput/SearchInput";
-import PageProps from "../types/PageProps";
+import { ShowsContext } from "../context/ShowsContext";
 
-export default function HomePage(props: PageProps) {
-  const trending = props.data.filter((item) => item.isTrending);
-  const recommended = props.data.slice(5);
+export default function HomePage() {
+  const { allShows } = useContext(ShowsContext);
+  const trending = allShows.filter((s) => s.isTrending);
+  const recommended = allShows.filter((s) => !s.isTrending);
 
   return (
     <main>
       <SearchInput placeholder="Search for movies or TV series" />
       <section>
         <h1 className="heading-l heading">Trending</h1>
-        <ScrollDisplay trending={trending} toggleBookmarked={props.toggleBookmarked} />
+        <ScrollDisplay trending={trending} />
       </section>
       <section>
         <h2 className="heading-l heading">Recommended for you</h2>
-        <Display recommended={recommended} toggleBookmarked={props.toggleBookmarked} />
+        <Display displayedShows={recommended} />
       </section>
     </main>
   );

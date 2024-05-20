@@ -15,7 +15,7 @@ type ShowsContext = {
   toggleBookmarked: (item: DataItem) => void;
 };
 
-const ShowsContext = createContext({} as ShowsContext);
+export const ShowsContext = createContext({} as ShowsContext);
 
 export default function ShowsProvider({ children }: ShowsProviderProps) {
   const [allShows, updateAllShows] = useImmer(data);
