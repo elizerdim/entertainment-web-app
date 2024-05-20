@@ -1,15 +1,18 @@
 import styles from "./scroll-display.module.css";
 import DataItem from "../../types/DataItem";
+import { useContext } from "react";
+import { ShowsContext } from "../../context/ShowsContext";
 
-type Props = {
+type ScrollDisplayProps = {
   trending: DataItem[];
-  toggleBookmarked: (arg: DataItem) => void;
-}
+};
 
-export default function ScrollDisplay(props: Props) {
+export default function ScrollDisplay({ trending }: ScrollDisplayProps) {
+  const { toggleBookmarked } = useContext(ShowsContext);
+
   return (
     <div className={`${styles.container} flex`}>
-      {props.trending.map((item) => (
+      {trending.map((item) => (
         <article className={styles.item} key={item.title.split(" ").join("-")}>
           <picture className={styles.image}>
             <source
@@ -20,9 +23,15 @@ export default function ScrollDisplay(props: Props) {
               media="(min-width: 48em)"
               srcSet={`${item.thumbnail.trending?.large.slice(8)}`}
             />
-            <img src={`${item.thumbnail.trending?.large.slice(8)}`} alt="Movie Poster" />
+            <img
+              src={`${item.thumbnail.trending?.large.slice(8)}`}
+              alt="Movie Poster"
+            />
           </picture>
-          <button className="bookmark-button bg-dark" onClick={() => props.toggleBookmarked(item)}>
+          <button
+            className="bookmark-button bg-dark"
+            onClick={() => toggleBookmarked(item)}
+          >
             <svg
               width="12"
               height="14"
