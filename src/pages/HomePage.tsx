@@ -6,8 +6,8 @@ import { ShowsContext } from "../context/ShowsContext";
 
 export default function HomePage() {
   const { allShows } = useContext(ShowsContext);
-  const trending = allShows.filter((s) => s.isTrending);
-  const recommended = allShows.filter((s) => !s.isTrending);
+  const trending = allShows.filter((show) => show.isTrending);
+  const recommended = allShows.filter((show) => !show.isTrending);
 
   return (
     <main>
