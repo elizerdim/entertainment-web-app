@@ -9,7 +9,6 @@ type ShowsProviderProps = {
 
 type ShowsContext = {
   allShows: DataItem[];
-  movies: DataItem[];
   tvSeries: DataItem[];
   bookmarked: DataItem[];
   toggleBookmarked: (item: DataItem) => void;
@@ -20,7 +19,6 @@ export const ShowsContext = createContext({} as ShowsContext);
 export default function ShowsProvider({ children }: ShowsProviderProps) {
   const [allShows, updateAllShows] = useImmer(data);
 
-  const movies = allShows.filter((show) => show.category === "Movie");
   const tvSeries = allShows.filter((show) => show.category === "TV Series");
   const bookmarked = allShows.filter((show) => show.isBookmarked);
 
@@ -35,7 +33,6 @@ export default function ShowsProvider({ children }: ShowsProviderProps) {
     <ShowsContext.Provider
       value={{
         allShows,
-        movies,
         tvSeries,
         bookmarked,
         toggleBookmarked,
