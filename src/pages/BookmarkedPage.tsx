@@ -10,7 +10,7 @@ export default function BookmarkedPage() {
 
   return (
     <main>
-      <SearchInput placeholder="Search for movies" />
+      <SearchInput placeholder="Search for bookmarked shows" />
       <h1 className="sr-only">Bookmarked Movies and TV Series</h1>
       <h2>Bookmarked Movies</h2>
       <Display displayedShows={bookmarkedMovies} />
