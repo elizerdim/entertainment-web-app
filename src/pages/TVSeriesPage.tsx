@@ -9,7 +9,7 @@ export default function TVSeriesPage() {
 
   return (
     <main>
-      <SearchInput placeholder="Search for movies" />
+      <SearchInput placeholder="Search for TV series" />
       <h1>TV Series</h1>
       <Display displayedShows={tvSeries} />
     </main>
