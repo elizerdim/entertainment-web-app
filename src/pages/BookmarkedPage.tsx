@@ -11,22 +11,18 @@ export default function BookmarkedPage() {
   const bookmarkedTVSeries = allShows.filter(
     (show) => show.isBookmarked && show.category === "TV Series"
   );
-  const allBookmarkedShows = [
-    ...bookmarkedMovies,
-    ...bookmarkedTVSeries,
-  ];
+  const bookmarkedShows = [...bookmarkedMovies, ...bookmarkedTVSeries];
 
   return (
-    <main>
-      <SearchInput
-        placeholder="Search for bookmarked shows"
-        searchData={allBookmarkedShows}
-      />
+    <SearchInput
+      placeholder="Search for bookmarked shows"
+      searchData={bookmarkedShows}
+    >
       <h1 className="sr-only">Bookmarked Movies and TV Series</h1>
       <h2>Bookmarked Movies</h2>
       <Display displayedShows={bookmarkedMovies} />
       <h2>Bookmarked TV Series</h2>
       <Display displayedShows={bookmarkedTVSeries} />
-    </main>
+    </SearchInput>
   );
 }

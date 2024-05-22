@@ -8,10 +8,12 @@ export default function TVSeriesPage() {
   const tvSeries = allShows.filter((show) => show.category === "TV Series");
 
   return (
-    <main>
-      <SearchInput placeholder="Search for TV series" searchData={tvSeries} />
+    <SearchInput
+      placeholder="Search for TV series"
+      searchData={tvSeries}
+    >
       <h1>TV Series</h1>
       <Display displayedShows={tvSeries} />
-    </main>
+    </SearchInput>
   );
 }

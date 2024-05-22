@@ -8,10 +8,12 @@ export default function MoviesPage() {
   const movies = allShows.filter((show) => show.category === "Movie");
 
   return (
-    <main>
-      <SearchInput placeholder="Search for movies" searchData={movies} />
+    <SearchInput
+      placeholder="Search for movies"
+      searchData={movies}
+    >
       <h1>Movies</h1>
       <Display displayedShows={movies} />
-    </main>
+    </SearchInput>
   );
 }
