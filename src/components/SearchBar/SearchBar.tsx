@@ -1,5 +1,5 @@
 import { ReactNode, useState } from "react";
-import styles from "./search-input.module.css";
+import styles from "./search-bar.module.css";
 import DataItem from "../../types/DataItem";
 import Display from "../Display/Display";
 

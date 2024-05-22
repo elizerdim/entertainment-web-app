@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Display from "../components/Display/Display";
-import SearchInput from "../components/SearchInput/SearchInput";
+import SearchBar from "../components/SearchBar/SearchBar";
 import { ShowsContext } from "../context/ShowsContext";
 
 export default function TVSeriesPage() {
@@ -8,12 +8,12 @@ export default function TVSeriesPage() {
   const tvSeries = allShows.filter((show) => show.category === "TV Series");
 
   return (
-    <SearchInput
+    <SearchBar
       placeholder="Search for TV series"
       searchData={tvSeries}
     >
       <h1>TV Series</h1>
       <Display displayedShows={tvSeries} />
-    </SearchInput>
+    </SearchBar>
   );
 }

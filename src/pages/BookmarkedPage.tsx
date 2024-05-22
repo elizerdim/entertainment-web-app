@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Display from "../components/Display/Display";
-import SearchInput from "../components/SearchInput/SearchInput";
+import SearchBar from "../components/SearchBar/SearchBar";
 import { ShowsContext } from "../context/ShowsContext";
 
 export default function BookmarkedPage() {
@@ -14,7 +14,7 @@ export default function BookmarkedPage() {
   const bookmarkedShows = [...bookmarkedMovies, ...bookmarkedTVSeries];
 
   return (
-    <SearchInput
+    <SearchBar
       placeholder="Search for bookmarked shows"
       searchData={bookmarkedShows}
     >
@@ -23,6 +23,6 @@ export default function BookmarkedPage() {
       <Display displayedShows={bookmarkedMovies} />
       <h2>Bookmarked TV Series</h2>
       <Display displayedShows={bookmarkedTVSeries} />
-    </SearchInput>
+    </SearchBar>
   );
 }

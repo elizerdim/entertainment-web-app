@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import Display from "../components/Display/Display";
 import ScrollDisplay from "../components/ScrollDisplay/ScrollDisplay";
-import SearchInput from "../components/SearchInput/SearchInput";
+import SearchBar from "../components/SearchBar/SearchBar";
 import { ShowsContext } from "../context/ShowsContext";
 
 export default function HomePage() {
@@ -10,7 +10,7 @@ export default function HomePage() {
   const recommended = allShows.filter((show) => !show.isTrending);
 
   return (
-    <SearchInput
+    <SearchBar
       placeholder="Search for movies or TV series"
       searchData={allShows}
     >
@@ -22,6 +22,6 @@ export default function HomePage() {
         <h2 className="heading-l heading">Recommended for you</h2>
         <Display displayedShows={recommended} />
       </section>
-    </SearchInput>
+    </SearchBar>
   );
 }
