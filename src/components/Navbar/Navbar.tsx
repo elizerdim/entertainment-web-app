@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom";
-import styles from "./sidebar.module.css";
+import styles from "./navbar.module.css";
 
 export default function Sidebar() {
   const currentPath = useLocation().pathname;
