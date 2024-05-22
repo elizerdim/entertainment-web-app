@@ -10,20 +10,18 @@ export default function HomePage() {
   const recommended = allShows.filter((show) => !show.isTrending);
 
   return (
-      <SearchInput
-        placeholder="Search for movies or TV series"
-        searchData={allShows}
-      >
-        <main>
-          <section>
-            <h1 className="heading-l heading">Trending</h1>
-            <ScrollDisplay trending={trending} />
-          </section>
-          <section>
-            <h2 className="heading-l heading">Recommended for you</h2>
-            <Display displayedShows={recommended} />
-          </section>
-        </main>
+    <SearchInput
+      placeholder="Search for movies or TV series"
+      searchData={allShows}
+    >
+      <section>
+        <h1 className="heading-l heading">Trending</h1>
+        <ScrollDisplay trending={trending} />
+      </section>
+      <section>
+        <h2 className="heading-l heading">Recommended for you</h2>
+        <Display displayedShows={recommended} />
+      </section>
     </SearchInput>
   );
 }
