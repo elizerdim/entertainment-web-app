@@ -1,6 +1,7 @@
 import { ReactNode, useState } from "react";
 import styles from "./search-input.module.css";
 import DataItem from "../../types/DataItem";
+import Display from "../Display/Display";
 
 type Props = {
   placeholder: string;
@@ -14,16 +15,15 @@ export default function SearchInput({
   children,
 }: Props) {
   const [searchInput, setSearchInput] = useState("");
-  const [results, setResults] = useState([] as DataItem[]);
 
-  function showResults(e) {
-    e.preventDefault();
-    setResults(searchData.filter((i) => i.title.includes(searchInput)));
-  }
+  // This array is filled with all shows at the beginning
+  const results = searchData.filter((i) =>
+    i.title.toLowerCase().includes(searchInput.toLowerCase())
+  );
 
   return (
     <>
-      <form onSubmit={showResults} className={`${styles["seach-bar"]} flex`}>
+      <form className={`${styles["seach-bar"]} flex`}>
         <button>
           <img
             src="/app_icons/search-icon.png"
@@ -40,14 +40,20 @@ export default function SearchInput({
           placeholder={placeholder}
           className={`${styles["search-input"]} heading-m`}
           value={searchInput}
-          onChange={(e) => setSearchInput(e.target.value)}
+          onChange={(e) => {
+            setSearchInput(e.target.value);
+          }}
         />
       </form>
-      {results.length > 0
-        ? results.map((result) => (
-            <p key={result.title.split(" ").join("-")}>{result.title}</p>
-          ))
-        : children}
+      <main>
+        {results.length <= 0 ? (
+          "No shows found"
+        ) : searchInput !== "" ? (
+          <Display displayedShows={results} />
+        ) : (
+          children
+        )}
+      </main>
     </>
   );
 }
