@@ -23,7 +23,10 @@ export default function SearchInput({
 
   return (
     <>
-      <form className={`${styles["seach-bar"]} flex`}>
+      <form
+        onSubmit={(e) => e.preventDefault()}
+        className={`${styles["seach-bar"]} flex`}
+      >
         <button>
           <img
             src="/app_icons/search-icon.png"
