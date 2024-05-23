@@ -10,7 +10,7 @@ export default function Sidebar() {
       <nav>
         <ul role="list" className={`${styles["nav-list"]} flex`}>
           <li>
-            <NavLink to="/" className={styles["nav-list-item"]}>
+            <NavLink to="/" className={styles["nav-list-item"]} title="Home">
               <svg
                 aria-hidden="true"
                 className={`${styles["nav-icon"]} ${
@@ -31,7 +31,7 @@ export default function Sidebar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/movies" className={styles["nav-list-item"]}>
+            <NavLink to="/movies" className={styles["nav-list-item"]} title="Movies">
               <svg
                 aria-hidden="true"
                 className={`${styles["nav-icon"]} ${
@@ -52,7 +52,7 @@ export default function Sidebar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/tvseries" className={styles["nav-list-item"]}>
+            <NavLink to="/tvseries" className={styles["nav-list-item"]} title="TV Series">
               <svg
                 aria-hidden="true"
                 className={`${styles["nav-icon"]} ${
@@ -73,7 +73,7 @@ export default function Sidebar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/bookmarked" className={styles["nav-list-item"]}>
+            <NavLink to="/bookmarked" className={styles["nav-list-item"]} title="Bookmarked Shows">
               <svg
                 aria-hidden="true"
                 className={`${styles["nav-icon"]} ${
