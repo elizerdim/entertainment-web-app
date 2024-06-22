@@ -7,7 +7,7 @@ export default function Sidebar() {
   return (
     <header className={`${styles.header} bg-accent flex`}>
       <img className={styles.logo} src="/sidebar_icons/clapperboard.svg" alt="Logo" />
-      <nav>
+      <nav className={styles.nav}>
         <ul role="list" className={`${styles["nav-list"]} flex`}>
           <li>
             <NavLink to="/" className={styles["nav-list-item"]} title="Home">

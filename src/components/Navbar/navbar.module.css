@@ -60,26 +60,29 @@
 
 @media only screen and (min-width: 90em) {
   .header {
-    flex-wrap: wrap;
+    flex-direction: column;
     width: 6em;
-    justify-content: center;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
     float: left;
     margin: 2rem 1.5rem;
     margin-right: 2.5rem;
     border-radius: 1.25em;
+    height: 100svh;
+  }
+
+  .nav {
+    margin-top: 2em;
+    margin-bottom: auto;
   }
 
   .nav-list {
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 3rem;
   }
 
   .avatar {
     width: 2.5em;
     height: 2.5em;
-    margin-top: 20rem;
   }
 }
