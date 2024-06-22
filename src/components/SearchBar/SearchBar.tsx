@@ -50,7 +50,7 @@ export default function SearchInput({
       </form>
       {results.length <= 0 ? (
         <main>
-          <p>"No shows found"</p>
+          <p className={styles["not-found"]}>"No shows found"</p>
         </main>
       ) : searchInput !== "" ? (
         <main>

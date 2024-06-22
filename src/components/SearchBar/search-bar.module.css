@@ -11,6 +11,10 @@
   color: var(--clr-neutral);
 }
 
+.not-found {
+  font-style: italic;
+}
+
 @media only screen and (min-width: 48em) {
   .search-icon {
     width: unset;
