@@ -48,15 +48,17 @@ export default function SearchInput({
           }}
         />
       </form>
-      <main>
-        {results.length <= 0 ? (
-          "No shows found"
-        ) : searchInput !== "" ? (
+      {results.length <= 0 ? (
+        <main>
+          <p>"No shows found"</p>
+        </main>
+      ) : searchInput !== "" ? (
+        <main>
           <Display displayedShows={results} />
-        ) : (
-          children
-        )}
-      </main>
+        </main>
+      ) : (
+        children
+      )}
     </>
   );
 }

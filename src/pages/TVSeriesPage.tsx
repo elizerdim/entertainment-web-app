@@ -12,8 +12,10 @@ export default function TVSeriesPage() {
       placeholder="Search for TV series"
       searchData={tvSeries}
     >
-      <h1>TV Series</h1>
-      <Display displayedShows={tvSeries} />
+      <main>
+        <h1>TV Series</h1>
+        <Display displayedShows={tvSeries} />
+      </main>
     </SearchBar>
   );
 }

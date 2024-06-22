@@ -18,11 +18,13 @@ export default function BookmarkedPage() {
       placeholder="Search for bookmarked shows"
       searchData={bookmarkedShows}
     >
-      <h1 className="sr-only">Bookmarked Movies and TV Series</h1>
-      <h2>Bookmarked Movies</h2>
-      <Display displayedShows={bookmarkedMovies} />
-      <h2>Bookmarked TV Series</h2>
-      <Display displayedShows={bookmarkedTVSeries} />
+      <main>
+        <h1 className="sr-only">Bookmarked Movies and TV Series</h1>
+        <h2>Bookmarked Movies</h2>
+        <Display displayedShows={bookmarkedMovies} />
+        <h2>Bookmarked TV Series</h2>
+        <Display displayedShows={bookmarkedTVSeries} />
+      </main>
     </SearchBar>
   );
 }
