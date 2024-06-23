@@ -124,9 +124,8 @@ button {
 }
 
 .container {
-  padding-inline: 2em;
+  padding-inline: 1rem;
   margin-inline: auto;
-  max-width: 80rem;
 }
 
 .sr-only {
@@ -201,10 +200,6 @@ body {
   font-family: "Outfit", sans-serif;
 }
 
-main {
-  padding: 1rem;
-}
-
 input {
   background-color: var(--clr-primary-600);
   border: none;
@@ -226,16 +221,4 @@ input {
 
 .bookmarked {
   fill: var(--clr-neutral);
-}
-
-@media only screen and (min-width: 48em) {
-  main {
-    padding: .75rem 1.75rem;
-  }
-}
-
-@media only screen and (min-width: 90em) {
-  main {
-    padding-top: 3.5rem;
-  }
 }
