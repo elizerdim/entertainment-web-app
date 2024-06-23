@@ -12,7 +12,7 @@ export default function MoviesPage() {
       placeholder="Search for movies"
       searchData={movies}
     >
-      <main>
+      <main className="container">
         <h1>Movies</h1>
         <Display displayedShows={movies} />
       </main>

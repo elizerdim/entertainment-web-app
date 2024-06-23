@@ -14,7 +14,7 @@ export default function HomePage() {
       placeholder="Search for movies or TV series"
       searchData={allShows}
     >
-      <main>
+      <main className="container">
         <section>
           <h1 className="heading-l heading">Trending</h1>
           <ScrollDisplay trending={trending} />
