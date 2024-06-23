@@ -128,9 +128,16 @@ button {
   margin-inline: auto;
 }
 
+@media only screen and (min-width: 48em) {
+  .container {
+    padding-inline: 1.5rem;
+  }
+}
+
 @media only screen and (min-width: 90em) {
   .container {
-    margin-left: 9em;
+    padding-inline: 2.25rem;
+    margin-left: 8em;
   }
 }
 
