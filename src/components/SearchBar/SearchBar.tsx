@@ -49,11 +49,12 @@ export default function SearchInput({
         />
       </form>
       {results.length <= 0 ? (
-        <main>
-          <p className={styles["not-found"]}>"No shows found"</p>
+        <main className="container">
+          <p className={`${styles["not-found"]} heading-l`}>"No shows found"</p>
         </main>
       ) : searchInput !== "" ? (
-        <main>
+        <main className="container">
+          <p className={`${styles["found-results"]} heading-l`}>Found {results.length} result{results.length > 1 && "s"} for ‘{searchInput}’</p>
           <Display displayedShows={results} />
         </main>
       ) : (
