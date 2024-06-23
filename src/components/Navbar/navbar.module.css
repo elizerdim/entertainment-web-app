@@ -60,15 +60,17 @@
 
 @media only screen and (min-width: 90em) {
   .header {
+    position: fixed;
+    top: 1rem;
+    z-index: 999;
     flex-direction: column;
     width: 6em;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
-    float: left;
-    margin: 2rem 1.5rem;
+    margin-left: 2rem;
     margin-right: 2.5rem;
     border-radius: 1.25em;
-    height: 100svh;
+    height: 90%;
   }
 
   .nav {
