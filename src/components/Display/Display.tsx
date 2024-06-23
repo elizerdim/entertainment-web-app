@@ -65,7 +65,7 @@ export default function Display({displayedShows}: DisplayProps) {
               <span>&bull;</span>
               <span>{item.rating}</span>
             </div>
-            <h3 className="heading-s">{item.title}</h3>
+            <h3 className="heading-xs">{item.title}</h3>
           </div>
         </article>
       ))}
