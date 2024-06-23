@@ -1,4 +1,4 @@
-.seach-bar {
+.search-bar {
   align-items: center;
   padding-top: 1.5rem;
 }
@@ -24,7 +24,7 @@
 }
 
 @media only screen and (min-width: 48em) {
-  .seach-bar {
+  .search-bar {
     padding-top: 2rem;
   }
 
@@ -34,7 +34,7 @@
 }
 
 @media only screen and (min-width: 90em) {
-  .seach-bar {
+  .search-bar {
     padding-top: 4rem;
   }
 }

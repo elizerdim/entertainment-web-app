@@ -25,13 +25,13 @@ export default function SearchInput({
     <>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className={`${styles["seach-bar"]} container flex`}
+        className={`${styles["search-bar"]} container flex`}
       >
         <button>
           <img
             src="/app_icons/search-icon.png"
             alt=""
-            className={styles["seach-icon"]}
+            className={styles["search-icon"]}
           />
         </button>
         <label htmlFor="search" className="sr-only">
