@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - [View Code](https://github.com/elizerdim/entertainment-web-app)
-- [Live Preview](https://www.example.com)
+- [Live Preview](https://entertainment-web-app-kohl.vercel.app/)
 
 ## My process
 
