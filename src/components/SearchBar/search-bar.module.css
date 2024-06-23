@@ -9,6 +9,14 @@
 
 .search-input {
   color: var(--clr-neutral);
+  padding-bottom: .5rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-bottom: 1px solid #979797;
+  margin-bottom: -1px;
+  caret-color: red;
 }
 
 .not-found {
