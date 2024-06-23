@@ -1,6 +1,6 @@
 .seach-bar {
   align-items: center;
-  margin-top: .5rem;
+  padding-top: 1.5rem;
 }
 
 .search-icon {
@@ -16,7 +16,17 @@
 }
 
 @media only screen and (min-width: 48em) {
+  .seach-bar {
+    padding-top: 2rem;
+  }
+
   .search-icon {
     width: unset;
+  }
+}
+
+@media only screen and (min-width: 90em) {
+  .seach-bar {
+    padding-top: 4rem;
   }
 }

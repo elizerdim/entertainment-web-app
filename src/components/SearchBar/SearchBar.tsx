@@ -25,7 +25,7 @@ export default function SearchInput({
     <>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className={`${styles["seach-bar"]} flex`}
+        className={`${styles["seach-bar"]} container flex`}
       >
         <button>
           <img
