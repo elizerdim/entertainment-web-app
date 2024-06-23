@@ -13,7 +13,7 @@ export default function MoviesPage() {
       searchData={movies}
     >
       <main className="container">
-        <h1>Movies</h1>
+        <h1 className="heading-l">Movies</h1>
         <Display displayedShows={movies} />
       </main>
     </SearchBar>

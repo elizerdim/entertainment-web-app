@@ -13,7 +13,7 @@ export default function TVSeriesPage() {
       searchData={tvSeries}
     >
       <main className="container">
-        <h1>TV Series</h1>
+        <h1 className="heading-l">TV Series</h1>
         <Display displayedShows={tvSeries} />
       </main>
     </SearchBar>
