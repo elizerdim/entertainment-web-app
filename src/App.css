@@ -150,6 +150,7 @@ button {
 .heading-l {
   font-weight: 300;
   font-size: 2rem;
+  margin-top: 2.5rem;
 }
 .heading-m {
   font-weight: 300;
@@ -175,6 +176,7 @@ button {
 @media only screen and (max-width: 48em) {
   .heading-l {
     font-size: 1.25rem;
+    margin-top: 1.5rem;
   }
   .heading-m {
     font-size: 1rem;
@@ -204,10 +206,6 @@ input {
   background-color: var(--clr-primary-600);
   border: none;
   width: 100%;
-}
-
-.heading {
-  margin: 1.25rem 0;
 }
 
 .bookmark-button {
