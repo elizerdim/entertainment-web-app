@@ -149,49 +149,49 @@ button {
 
 .heading-l {
   font-weight: 300;
-  font-size: 2rem;
-  margin-top: 2.5rem;
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
 }
 .heading-m {
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .heading-s {
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .heading-xs {
   font-weight: 500;
-  font-size: 1.125rem;
+  font-size: 0.9rem;
 }
 .body-m {
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .body-s {
   font-weight: 300;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
-@media only screen and (max-width: 48em) {
+@media only screen and (min-width: 48em) {
   .heading-l {
-    font-size: 1.25rem;
-    margin-top: 1.5rem;
+    font-size: 2rem;
+    margin-top: 2.5rem;
   }
   .heading-m {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .heading-s {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .heading-xs {
-    font-size: 0.9rem;
+    font-size: 1.125rem;
   }
   .body-m {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .body-s {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 
